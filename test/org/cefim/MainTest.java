@@ -1,5 +1,6 @@
 package test.org.cefim;
 
+import org.cefim.Main;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,23 +14,25 @@ import org.junit.Test;
 */ 
 public class MainTest { 
 
-@Before
-public void before() throws Exception { 
-} 
+    private Main main;
 
-@After
-public void after() throws Exception { 
-} 
+    @Before
+    public void before() throws Exception {
+        main = new Main();
+    }
 
-/** 
-* 
-* Method: main(String[] args) 
-* 
-*/ 
-@Test
-public void testMain() throws Exception { 
-//TODO: Test goes here... 
-} 
+    @After
+    public void after() throws Exception {
+    }
 
+    /**
+    *
+    * Method: main(String[] args)
+    *
+    */
+    @Test
+    public void shouldReturn12WithValues1and2() throws Exception {
+        assertEquals("12", main.generate(1, 2));
+    }
 
-} 
+}
