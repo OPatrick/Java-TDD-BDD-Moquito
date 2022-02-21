@@ -14,4 +14,12 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
     }
+
+    public String generate(int from, int to) {
+        StringBuilder result = new StringBuilder();
+        for (int i=from; i<=to; i++) {
+            result.append(Integer.valueOf(i));
+        }
+        return result.toString();
+    }
 }
