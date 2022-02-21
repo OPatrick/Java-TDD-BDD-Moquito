@@ -38,7 +38,7 @@ public class MainTest {
     }
 
     @Test
-    public void shouldReturn12FizzBuzzWithValues1To5() {
-        assertEquals("12FizzBuzz", main.generate(1, 5));
+    public void shouldReturn12Fizz4BuzzWithValues1To5() {
+        assertEquals("12Fizz4Buzz", main.generate(1, 5));
     }
 }

@@ -22,6 +22,10 @@ public class Main {
                 result.append("Fizz");
                 continue;
             }
+            if (i%5 == 0) {
+                result.append("Buzz");
+                continue;
+            }
             result.append(Integer.valueOf(i));
         }
         return result.toString();
