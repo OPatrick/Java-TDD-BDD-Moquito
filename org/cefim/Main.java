@@ -18,12 +18,16 @@ public class Main {
     public String generate(int from, int to) {
         StringBuilder result = new StringBuilder();
         for (int i=from; i<=to; i++) {
-            if (i%3 == 0) {
-                result.append("Fizz");
+            if (i%15 == 0) {
+                result.append("FizzBuzz");
                 continue;
             }
             if (i%5 == 0) {
                 result.append("Buzz");
+                continue;
+            }
+            if (i%3 == 0) {
+                result.append("Fizz");
                 continue;
             }
             result.append(Integer.valueOf(i));
