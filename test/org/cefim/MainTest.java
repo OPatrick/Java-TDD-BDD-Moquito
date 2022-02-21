@@ -27,14 +27,13 @@ public class MainTest {
     public void after() throws Exception {
     }
 
-    /**
-    *
-    * Method: main(String[] args)
-    *
-    */
     @Test
     public void shouldReturn12WithValues1and2() throws Exception {
         assertEquals("12", main.generate(1, 2));
     }
 
+    @Test
+    public void shouldReturn12FizzWithValues1To3() {
+        assertEquals("12Fizz", main.generate(1, 3));
+    }
 }
