@@ -19,16 +19,16 @@ public class MainTest {
     private Main main;
 
     @Before
-    public void before() throws Exception {
+    public void before() {
         main = new Main();
     }
 
     @After
-    public void after() throws Exception {
+    public void after() {
     }
 
     @Test
-    public void shouldReturn12WithValues1and2() throws Exception {
+    public void shouldReturn12WithValues1and2() {
         assertEquals("12", main.generate(1, 2));
     }
 
