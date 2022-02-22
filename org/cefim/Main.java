@@ -18,20 +18,24 @@ public class Main {
     public String generate(int from, int to) {
         StringBuilder result = new StringBuilder();
         for (int i=from; i<=to; i++) {
-            if (i%15 == 0) {
-                result.append("FizzBuzz");
-                continue;
-            }
-            if (i%5 == 0) {
-                result.append("Buzz");
-                continue;
-            }
-            if (i%3 == 0) {
-                result.append("Fizz");
-                continue;
-            }
-            result.append(Integer.valueOf(i));
+            getOneResult(result, i);
         }
         return result.toString();
+    }
+
+    private void getOneResult(StringBuilder result, int i) {
+        if (i %15 == 0) {
+            result.append("FizzBuzz");
+            return;
+        }
+        if (i %5 == 0) {
+            result.append("Buzz");
+            return;
+        }
+        if (i %3 == 0) {
+            result.append("Fizz");
+            return;
+        }
+        result.append(Integer.valueOf(i));
     }
 }
